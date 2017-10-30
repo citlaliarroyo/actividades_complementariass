@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8"/>
@@ -114,3 +114,8 @@
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo right"><?php echo $title_menu; ?></a>
                     <ul id="nav-mobile" class="left side-nav">
+                        <li><a href="index.php">Inicio</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>

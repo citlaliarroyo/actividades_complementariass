@@ -16,7 +16,7 @@
 	  	//TODO:UPDATE ARTICLE
 	  	$sql_update_details = 'UPDATE estudiante SET No_control = ?, nombre_estudiante = ?,
 			apellido_paterno_estudiante = ?, apellido_materno_estudiante = ?, semestre = ?, carrera_clave_carrera = ?
-			WHERE No_control_2 = ?';
+			WHERE No_control = ?';
 
 		$noControl = isset($_GET['No_control']) ? $_GET['No_control']: '';
 		$noControl_2 = isset($_POST['No_control_2']) ? $_POST['No_control_2']: '';
@@ -52,8 +52,7 @@
 	$statement_status = $pdo->prepare($sql_status);
 	$statement_status->execute();
 	$results_status = $statement_status->fetchAll();
-?>
-<?php
+
 	include('../extend/header.php');
 ?>
 
@@ -113,7 +112,7 @@
                   						<?php
 				        					foreach($results as $rs) {
 				        				?>
-  										<option value="<?php echo $rs['carrera_clave_carrera']?>"><?php echo $rs['nombre_carrera']?></option>
+  										<option value="<?php echo $rs['clave_carrera']?>"><?php echo $rs['nombre_carrera']?></option>
   										<?php
 				          					}
 				        				?>
@@ -148,7 +147,7 @@
 							<td><?php echo $rs2['apellido_paterno_estudiante']?></td>
 							<td><?php echo $rs2['apellido_materno_estudiante']?></td>
 							<td><?php echo $rs2['semestre']?></td>
-							<td><?php echo $rs2['nombre_carrera']?></td>
+							<td><?php echo $rs2['carrera_clave_carrera']?></td>
 							<td><a class="btn waves-effect waves-light" href="modificar_estudiante.php?No_control=<?php
 							echo $rs2['No_control']; ?>">Ver detalles</a></td>
 							<td><a class="btn waves-effect waves-light red" onclick="delete_estudiante(<?php echo $rs2['No_control']; ?>)" href="#">ELIMINAR</a>
