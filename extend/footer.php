@@ -2,8 +2,7 @@
                 <footer class="page-footer teal lighten-2">
                     <div class="footer-copyright">
                         <div class="container">
-                            &copy; 2017 Alondra Jaimes Gutierrez
-                        </div>
+                            &copy; 2017 CITLALI ARROYO ROMERO                        </div>
                     </div>
                 </footer>
             </div>
